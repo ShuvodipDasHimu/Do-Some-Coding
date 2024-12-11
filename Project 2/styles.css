@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply_box {
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+  border-radius: 10px;
+}
+
+.title_small {
+  font-size: 20px;
+}
+
+.form_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline-color: deepskyblue;
+}
+
+.button_container {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+button {
+  background-color: deepskyblue;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  background-color: white;
+  border: 2px solid deepskyblue;
+  color: deepskyblue;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+/* select:focus option {
+  background-color: deepskyblue;
+  color: white;
+} */
+
+/* select option:first-of-type{
+  background-color: white;
+  color: black;
+} */
+
+
+
+.textarea_control {
+  grid-column: 1 /span 2;
+}
+
+.textarea_control textarea {
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+  .textarea_control {
+    grid-column: 1 /span 1;
+  }
+}
+
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.selected-option {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown-option {
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-option:hover {
+  background-color: deepskyblue;
+  color: white;
+}
+
+/* Show options when dropdown is active */
+.custom-dropdown.active .dropdown-options {
+  display: block;
+}
